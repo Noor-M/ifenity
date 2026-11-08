@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ifenity is a design studio in Iraq: brand identity, social media design, product design and 3D rendering.">
+<meta property="og:title" content="Ifenity Studio">
+<meta property="og:description" content="Brand identity, social media, product design and 3D rendering across Iraq.">
+<meta property="og:image" content="work/p4.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 18'%3E%3Cpath d='M9 2C4.6 2 2 5.4 2 9s2.6 7 7 7c6 0 10-14 16-14 4.4 0 7 3.4 7 7s-2.6 7-7 7c-6 0-10-14-16-14Z' fill='none' stroke='%23EE5A2A' stroke-width='3'/%3E%3C/svg%3E">
+<title>Ifenity Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Kufi+Arabic:wght@500;700&display=swap">
+<style>
+/* Layout: poster-wall studio site. Giant wordmark over a live infinity loop, then the real work as a filterable wall with a full-size viewer, disciplines as a ledger, and the six cities the studio works in. */
+:root{
+  --bg:#0B0B0C; --bg-2:#161617; --fg:#F2EFEA; --muted:#A09B94; --line:#2A2928;
+  --accent:#EE5A2A; --accent-ink:#0B0B0C;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --arabic:"Noto Kufi Arabic","Geeza Pro",Tahoma,sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#F4F2EF; --bg-2:#E9E6E1; --fg:#141312; --muted:#5F5A54; --line:#D3CEC7;
+  --accent:#C9431A; --accent-ink:#FFFFFF; color-scheme:light } }
+:root[data-theme="light"]{
+  --bg:#F4F2EF; --bg-2:#E9E6E1; --fg:#141312; --muted:#5F5A54; --line:#D3CEC7;
+  --accent:#C9431A; --accent-ink:#FFFFFF; color-scheme:light }
+
+*{box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font:500 12px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:.9;text-transform:uppercase}
+h2{font-size:clamp(44px,7vw,96px);font-weight:900}
+section{padding-block:clamp(64px,10vw,120px);border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head p{max-width:42ch;color:var(--muted);margin:0}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font:900 26px/1 var(--display);letter-spacing:.02em;text-decoration:none;text-transform:uppercase}
+.logo svg{width:34px;height:18px;color:var(--accent)}
+.links{display:flex;gap:28px}
+.links a{font:500 13px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:12px 20px;font:600 14px/1 var(--body);text-decoration:none;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+@media (max-width:760px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(40px,6vw,72px) clamp(48px,7vw,88px);border-top:0;overflow:hidden}
+#loop{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.hero-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.ar{font-family:var(--arabic);font-weight:700;direction:rtl}
+.wordmark{font:900 clamp(92px,22vw,330px)/.8 var(--display);letter-spacing:-.01em;margin:28px 0 8px;text-transform:uppercase}
+.wordmark .inf{color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end}
+.hero-grid p{font-size:clamp(18px,2vw,22px);line-height:1.45;max-width:36ch;margin:0}
+.hero-grid p strong{display:block;font-weight:600;font-size:1.15em;margin-bottom:6px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:760px){.hero-grid{grid-template-columns:1fr}.hero-cta{justify-content:flex-start}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;background:var(--accent);color:var(--accent-ink)}
+.track{display:flex;width:max-content;animation:slide 36s linear infinite}
+.track span{font:700 30px/1 var(--display);text-transform:uppercase;padding:18px 28px;white-space:nowrap;display:flex;align-items:center;gap:28px}
+.track span::after{content:"∞";font-size:24px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.track{animation:none}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:0;padding-block:48px}
+.stat{padding:8px 24px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font:900 clamp(48px,6vw,80px)/1 var(--display);font-variant-numeric:tabular-nums}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr;row-gap:28px}.stat:nth-child(3){border-left:0;padding-left:0}}
+
+/* work */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.filters button span{opacity:.6;margin-left:6px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 20px}
+.card{display:flex;flex-direction:column;gap:12px;min-width:0;background:none;border:0;padding:0;text-align:left;color:inherit;font:inherit;cursor:zoom-in}
+.cover{position:relative;aspect-ratio:16/10;max-width:100%;border-radius:4px;overflow:hidden;background:var(--bg-2)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .cover img{transform:scale(1.04)}
+.cover .count{position:absolute;right:10px;bottom:10px;font:500 11px/1 var(--mono);background:var(--bg);color:var(--fg);padding:6px 8px;border-radius:999px}
+.meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.meta h3{font-size:28px;font-weight:700}
+.meta .label{white-space:nowrap}
+.card p{margin:0;color:var(--muted);font-size:14px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+
+/* viewer */
+.viewer{position:fixed;inset:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);display:grid;grid-template-rows:auto 1fr auto;gap:12px;
+  padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.viewer header,.viewer footer{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.viewer h3{font-size:32px}
+.viewer .stage{min-height:0;display:grid;place-items:center}
+.viewer .stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.icon-btn{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:10px 14px;cursor:pointer}
+.icon-btn[disabled]{opacity:.3;cursor:default}
+
+/* services */
+.svc{display:grid;grid-template-columns:120px 1fr 1.2fr;gap:24px;padding-block:28px;border-top:1px solid var(--line);align-items:start}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc h3{font-size:clamp(36px,4.5vw,60px);font-weight:700;transition:color .2s}
+.svc:hover h3{color:var(--accent)}
+.svc p{margin:0;color:var(--muted);max-width:52ch}
+.svc ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font:500 12px/1 var(--mono);padding:8px 10px;border:1px solid var(--line);border-radius:999px}
+@media (max-width:760px){.svc{grid-template-columns:1fr;gap:10px}}
+
+/* reach */
+.reach{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.cities{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.cities li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0 14px 28px;position:relative;border-bottom:1px solid var(--line)}
+.cities li::before{content:"";position:absolute;left:-5px;top:50%;width:9px;height:9px;background:var(--accent);transform:translateY(-50%)}
+.cities b{font:700 clamp(32px,4vw,48px)/1 var(--display);text-transform:uppercase}
+.cities .ar{font-size:18px;color:var(--muted)}
+.reach p{color:var(--muted);max-width:40ch}
+@media (max-width:760px){.reach{grid-template-columns:1fr}}
+
+/* clients */
+.clients{display:flex;flex-wrap:wrap;gap:14px 36px}
+.clients span{font:700 clamp(24px,3vw,36px)/1 var(--display);text-transform:uppercase;color:var(--muted);transition:color .2s}
+.clients span:hover{color:var(--fg)}
+
+/* contact */
+.contact h2{font-size:clamp(56px,10vw,150px)}
+.contact h2 span{color:var(--accent)}
+.contact-row{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-top:32px}
+.contact-row p{max-width:44ch;color:var(--muted);margin:0;font-size:18px}
+.reach-out{display:grid;gap:16px;min-width:0}
+.mail{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.mail a{font:700 clamp(28px,4vw,48px)/1 var(--display);text-decoration:none;text-transform:lowercase;overflow-wrap:anywhere;user-select:all}
+.mail a:hover{color:var(--accent)}
+
+footer.site{border-top:1px solid var(--line);padding-block:28px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site a{text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Ifenity home">
+      <svg viewBox="0 0 34 18" fill="none" aria-hidden="true"><path d="M9 2C4.6 2 2 5.4 2 9s2.6 7 7 7c6 0 10-14 16-14 4.4 0 7 3.4 7 7s-2.6 7-7 7c-6 0-10-14-16-14Z" stroke="currentColor" stroke-width="3"/></svg>
+      Ifenity
+    </a>
+    <div class="links">
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#reach">Reach</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="#contact">Start a project</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="loop" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="label">Branding · Social media · Product design · 3D</span>
+      <span class="ar">ستوديو تصميم في العراق</span>
+    </div>
+    <h1 class="wordmark">If<span class="inf">e</span>nity</h1>
+    <div class="hero-grid">
+      <p><strong>Your next strategic move.</strong>A design studio working with brands across Iraq and Kurdistan, in Kurdish, Arabic and English.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">See the work ↓</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Brand identity</span><span>Social media design</span><span>Product design</span><span>Packaging</span><span>3D rendering</span><span>Campaigns</span>
+    <span>Brand identity</span><span>Social media design</span><span>Product design</span><span>Packaging</span><span>3D rendering</span><span>Campaigns</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="stats" aria-label="Studio at a glance">
+    <div class="stat"><b>19</b><span class="label">Brands in this portfolio</span></div>
+    <div class="stat"><b>4</b><span class="label">Disciplines</span></div>
+    <div class="stat"><b>6</b><span class="label">Cities served</span></div>
+    <div class="stat"><b>3</b><span class="label">Languages: Kurdish, Arabic, English</span></div>
+  </section>
+
+  <section id="work">
+    <div class="sec-head">
+      <div>
+        <span class="label">Selected work</span>
+        <h2>The wall</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="services">
+    <div class="sec-head">
+      <div><span class="label">What we do</span><h2>Services</h2></div>
+      <p>Four disciplines under one roof, so a brand can go from logo to shelf to feed without changing hands.</p>
+    </div>
+    <div class="svc"><span class="label">Identity</span><div><h3>Brand identity</h3></div><div><p>Logos, bilingual wordmarks and full rollouts across signage, stationery, merchandise, apps and vehicles. Seen in Pixel, Xwen, Lana Home and BitVerse.</p><ul><li>Logo</li><li>Kurdish &amp; Arabic type</li><li>Signage</li><li>Stationery</li><li>Merchandise</li></ul></div></div>
+    <div class="svc"><span class="label">Social</span><div><h3>Social media design</h3></div><div><p>Monthly post grids, seasonal greetings for Ramadan, Eid and Newroz, offers and product launches. Seen in Massafi, Grand Aluminium, Moonix and For Kids.</p><ul><li>Post grids</li><li>Campaigns</li><li>Occasions</li><li>Billboards</li></ul></div></div>
+    <div class="svc"><span class="label">Product</span><div><h3>Product design</h3></div><div><p>Labels, cans, bottles and branded tape, presented with several directions to choose from. Seen in Al Yasmin, Magic Plus Clean and Power.</p><ul><li>Labels</li><li>Packaging</li><li>Mockups</li><li>Print</li></ul></div></div>
+    <div class="svc"><span class="label">3D</span><div><h3>3D rendering</h3></div><div><p>Product renders and lighting scenes built in Blender, for when a photo shoot can’t show what you need.</p><ul><li>Product renders</li><li>Lighting</li><li>Exploded views</li><li>Studio scenes</li></ul></div></div>
+  </section>
+
+  <section id="reach">
+    <div class="reach">
+      <div>
+        <span class="label">Where we work</span>
+        <h2>Across Iraq</h2>
+        <p>Clients from Dahuk in the north to Basra in the south. Every post and label is written in the language its audience reads.</p>
+      </div>
+      <ol class="cities">
+        <li><b>Dahuk</b><span class="ar">دهوك</span></li>
+        <li><b>Erbil</b><span class="ar">أربيل</span></li>
+        <li><b>Sulaimani</b><span class="ar">السليمانية</span></li>
+        <li><b>Kirkuk</b><span class="ar">كركوك</span></li>
+        <li><b>Baghdad</b><span class="ar">بغداد</span></li>
+        <li><b>Basra</b><span class="ar">البصرة</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-label="Clients">
+    <span class="label">Brands we’ve worked with</span>
+    <div class="clients" style="margin-top:20px">
+      <span>Massafi</span><span>A.O. Smith</span><span>Grand Aluminium</span><span>Kotan</span><span>KO Company</span><span>Moonix</span><span>BitVerse</span><span>Club Alpbach Iraq</span><span>Al Yasmin</span><span>Rose Life</span><span>For Kids</span><span>Friend Baby</span><span>Daily Fast Food</span><span>Magic Plus Clean</span><span>Lana Home</span><span>Pixel</span><span>Xwen</span><span>Hamahangi</span><span>Power</span>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <span class="label">New business</span>
+    <h2>Make your <span>next move.</span></h2>
+    <div class="contact-row">
+      <div class="reach-out">
+        <p>Tell us what you’re launching. Email us or send a message on Instagram and we’ll take it from there.</p>
+        <div class="mail"><a id="mail" href="mailto:contact@ifenti.net">contact@ifenti.net</a><button class="icon-btn" type="button" id="copyMail">Copy</button></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="mailto:contact@ifenti.net">Email us</a>
+        <a class="btn ghost" href="https://www.instagram.com/knight.studio.iraq/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="label">© 2026 Ifenity Studio · Iraq</span>
+    <span class="label"><a href="mailto:contact@ifenti.net">contact@ifenti.net</a> · <a href="https://www.instagram.com/knight.studio.iraq/" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="vTitle" hidden>
+  <header><div><span class="label" id="vCat"></span><h3 id="vTitle"></h3></div><button class="icon-btn" type="button" id="vClose">Close ✕</button></header>
+  <div class="stage"><img id="vImg" alt=""></div>
+  <footer><button class="icon-btn" type="button" id="vPrev">← Prev</button><span class="label" id="vPos"></span><button class="icon-btn" type="button" id="vNext">Next →</button></footer>
+</div>
+
+<script>
+const CATS={brand:"Branding",social:"Social media",product:"Product design","3d":"3D rendering"};
+const WORK=[
+  {t:"Pixel",c:"brand",img:[4],d:"Identity rolled out across apparel, signage, stationery, packaging and an app icon."},
+  {t:"Xwen · خوێن",c:"brand",img:[5],d:"Identity and app screens for a blood-donation platform, through to a metro billboard."},
+  {t:"Lana Home",c:"brand",img:[6],d:"Monochrome mark, construction grid, shopfront and hanging signage."},
+  {t:"Club Alpbach Iraq",c:"brand",img:[7],d:"River-line mark applied to badges, notebooks, totes and event spaces."},
+  {t:"Hamahangi",c:"brand",img:[8],d:"Identity for a humanitarian organisation: apparel, aid boxes, bags and vehicles."},
+  {t:"BitVerse",c:"brand",img:[9],d:"Tech identity with a wave pattern, ID cards, web and an Instagram grid."},
+  {t:"Massafi",c:"social",img:[11,12],d:"Natural mineral water. Seasonal posts in Kurdish and Arabic, plus an Eid al-Adha billboard."},
+  {t:"BitVerse campaign",c:"social",img:[14,13],d:"Cybersecurity awareness series: “Passwords are not security. Access control is.”"},
+  {t:"Kotan",c:"social",img:[15],d:"Shower cabin campaign that sets the product in a forest clearing."},
+  {t:"A.O. Smith",c:"social",img:[17],d:"Arabic campaign built on 150 years of trust, since 1874."},
+  {t:"Grand Aluminium Systems",c:"social",img:[19],d:"Pergolas and glazing in Erbil. Product posts plus Ramadan, Newroz and Halabja remembrance."},
+  {t:"Daily Fast Food",c:"social",img:[16],d:"Menu posts with script lettering over dark food photography."},
+  {t:"Rose Life",c:"social",img:[18],d:"Hair treatment launch posts in Kurdish with surreal product scenes."},
+  {t:"Moonix",c:"social",img:[23],d:"Diaper brand posts for Iraq, in Arabic and Kurdish, by size and weight."},
+  {t:"For Kids",c:"social",img:[21],d:"Children’s clothing store: seasonal sales, Ramadan offers and Women’s Day."},
+  {t:"Friend Baby",c:"social",img:[22],d:"Baby store price drops and product posts on a soft blue system."},
+  {t:"KO Company",c:"product",img:[20],d:"Bilingual brochure for an automatic door and access systems company."},
+  {t:"Al Yasmin",c:"product",img:[25],d:"Tomato paste can label, presented in three directions."},
+  {t:"Kotan · KO tape",c:"product",img:[26],d:"Branded packing tape and shipping boxes."},
+  {t:"Magic Plus Clean",c:"product",img:[27],d:"Concentrated dishwashing liquid label in three colourways, 1.5 L."},
+  {t:"Power",c:"product",img:[28],d:"Energy drink can with a line-drawn mark. “Find your power.”"},
+  {t:"Massafi in 3D",c:"3d",img:[30],d:"Bottle renders, a mountain scene and carton packaging for 48, 60 and 100 pieces."},
+  {t:"Chronograph study",c:"3d",img:[31],d:"Exploded watch render with clay passes and window light."},
+  {t:"Headlight study",c:"3d",img:[33],d:"Car headlight lighting study: lit renders against clay models."}
+];
+const src=n=>`work/p${n}.jpg`;
+
+// filters + grid
+const fEl=document.getElementById('filters'),gEl=document.getElementById('grid');
+const fs=[["all","All",WORK.length],...Object.entries(CATS).map(([k,v])=>[k,v,WORK.filter(w=>w.c===k).length])];
+fEl.innerHTML=fs.map(([k,v,n],i)=>`<button type="button" aria-pressed="${i===0}" data-f="${k}">${v}<span>${n}</span></button>`).join('');
+gEl.innerHTML=WORK.map((w,i)=>`<button type="button" class="card" data-c="${w.c}" data-i="${i}">
+  <div class="cover"><img src="${src(w.img[0])}" alt="${w.t}: ${w.d}" loading="${i<6?'eager':'lazy'}">${w.img.length>1?`<span class="count">1 / ${w.img.length}</span>`:''}</div>
+  <div class="meta"><h3>${w.t}</h3><span class="label">${CATS[w.c]}</span></div><p>${w.d}</p></button>`).join('');
+const btns=[...fEl.querySelectorAll('button')],cards=[...gEl.querySelectorAll('.card')];
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  cards.forEach(c=>c.hidden=!(b.dataset.f==='all'||c.dataset.c===b.dataset.f));
+}));
+
+// viewer: steps through every image of the visible projects
+const V=document.getElementById('viewer'),vImg=document.getElementById('vImg');
+let seq=[],pos=0,opener=null;
+function show(){const [wi,ii]=seq[pos],w=WORK[wi];
+  vImg.src=src(w.img[ii]);vImg.alt=`${w.t}: ${w.d}`;
+  document.getElementById('vTitle').textContent=w.t;
+  document.getElementById('vCat').textContent=CATS[w.c];
+  document.getElementById('vPos').textContent=`${pos+1} / ${seq.length}`;
+  document.getElementById('vPrev').disabled=pos===0;document.getElementById('vNext').disabled=pos===seq.length-1;}
+function open(i,btn){opener=btn;seq=[];
+  cards.filter(c=>!c.hidden).forEach(c=>{const wi=+c.dataset.i;WORK[wi].img.forEach((_,ii)=>seq.push([wi,ii]));});
+  pos=seq.findIndex(([wi])=>wi===i);V.hidden=false;document.body.style.overflow='hidden';show();document.getElementById('vClose').focus();}
+function close(){V.hidden=true;document.body.style.overflow='';opener&&opener.focus();}
+cards.forEach(c=>c.addEventListener('click',()=>open(+c.dataset.i,c)));
+document.getElementById('vClose').onclick=close;
+document.getElementById('vPrev').onclick=()=>{if(pos>0){pos--;show();}};
+document.getElementById('vNext').onclick=()=>{if(pos<seq.length-1){pos++;show();}};
+V.addEventListener('click',e=>{if(e.target===V||e.target.classList.contains('stage'))close();});
+addEventListener('keydown',e=>{if(V.hidden)return;
+  if(e.key==='Escape')close();if(e.key==='ArrowRight')document.getElementById('vNext').click();if(e.key==='ArrowLeft')document.getElementById('vPrev').click();});
+
+// copy email
+const cm=document.getElementById('copyMail');
+cm.addEventListener('click',()=>{
+  const el=document.getElementById('mail');
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);cm.textContent='Selected';};
+  try{navigator.clipboard.writeText(el.textContent).then(()=>cm.textContent='Copied',sel);}catch(e){sel();}
+  setTimeout(()=>cm.textContent='Copy',1800);
+});
+
+// infinity loop canvas
+(()=>{
+  const cv=document.getElementById('loop'),ctx=cv.getContext('2d');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let w,h,t=0;
+  function size(){const d=Math.min(devicePixelRatio||1,2);w=cv.clientWidth;h=cv.clientHeight;cv.width=w*d;cv.height=h*d;ctx.setTransform(d,0,0,d,0,0);}
+  const col=()=>getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#EE5A2A';
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    const a=Math.min(w*.46,h*.9),cx=w*.62,cy=h*.48,c=col();
+    for(let k=0;k<22;k++){
+      ctx.beginPath();const off=k*.045,sc=1-k*.018;
+      for(let i=0;i<=200;i++){const s=(i/200)*Math.PI*2,d=1+Math.sin(s)**2;
+        const x=cx+(a*sc*Math.cos(s+off*.3))/d,y=cy+(a*sc*.9*Math.sin(s)*Math.cos(s+t*.6+off))/d;
+        i?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+      ctx.strokeStyle=c;ctx.globalAlpha=.05+.22*(1-k/22);ctx.lineWidth=1;ctx.stroke();
+    }
+    ctx.globalAlpha=1;if(!reduce){t+=.006;requestAnimationFrame(draw);}
+  }
+  size();addEventListener('resize',()=>{size();if(reduce)draw();});draw();
+})();
+</script>
+
+</body>
+</html>
