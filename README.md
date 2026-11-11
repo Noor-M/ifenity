@@ -1,6 +1,6 @@
-# Ifenity Studio
+# Ifenti Studio
 
-Portfolio website for Ifenity, a design studio in Iraq: brand identity, social media design, product design and 3D rendering.
+Portfolio website for Ifenti, a design studio in Iraq: brand identity, social media design, product design and 3D rendering.
 
 Plain HTML, no build step. `index.html` and the `work/` image folder must stay side by side.
 
